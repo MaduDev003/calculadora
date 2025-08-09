@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+body{
+    background-color: #5FBA9B;
+}
+
+.brandBMO{
+    padding-left: 35%;
+    height: fit-content;
+}
+
+.brandBMO h1{
+    font-family: 'Wendy One', sans-serif;
+    font-size: 42px;
+    color: #092527;
+}
+
+.showCalc{
+    margin-left: 13px;
+    background-color: #CCFFD4;
+    width: 90%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.displayText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    color: #092527;
+    padding: 20px;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+.eyes{
+    display: flex;
+    padding-top: 70px;
+    justify-content: space-evenly;
+}
+.circle{
+    width: 17px;
+    height: 17px;
+    background-color: #092527; /* Cor do círculo */
+    border-radius: 50%; /* Deixa o elemento circular */
+}
+
+.smiley {
+    position: relative;
+    width: 50%; /* Largura responsiva */
+    height: 25%; /* Altura proporcional ao tamanho do contêiner */
+    padding-left: 49%; /* Ajusta o posicionamento da "boca" */
+  }
+  
+  .mouth {
+    width: 20%; /* Responsivo - a boca ocupa 60% da largura do contêiner */
+    height: 50%; /* Altura proporcional à altura do contêiner */
+    border-bottom: 4px solid black; /* Cria a linha do sorriso */
+    border-radius: 50%; /* Faz a curva do sorriso */
+    position: absolute;
+    bottom: 10%; /* Ajusta a posição vertical */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a boca */
+  }
+
+  
+.calcBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    height:fit-content;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    width: 83vw;
+    margin-left: 9px;
+    border-radius: 5px;
+    background-color: #96E9CD;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons:nth-child(1) .circleButton{
+    background-color: #043027;
+}
+
+.circleButton {
+    width: min(15vw, 53px);  /* 12% da largura da tela, mas no máximo 53px */
+    height: min(15vw, 53px); /* Mantém a proporção */
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleButton h2{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.rectangleButton.divide svg {
+    stroke: #ffffff;
+    width: 37px;
+    height: 37px;
+    stroke-width: 1.5;
+}
+
+.rectangleButton.multiply svg {
+    stroke: #ffffff;
+    width: 37px;
+    height: 37px;
+    stroke-width: 1.5;
+}
+
+.rectangleButton.subtract svg {
+    stroke: #ffffff;
+    width: 37px;
+    height: 37px;
+    stroke-width: 1.5;
+}
+
+.rectangleButton.plus svg {
+    stroke: #ffffff;
+    width: 37px;
+    height: 37px;
+    stroke-width: 1.5;
+}
+
+.rectangleButton.equal h2 {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.rectangleButton.zero {
+    height: 43px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* alinha o conteúdo no início */
+}
+
+.rectangleButton.zero h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: #000000;
+    margin-left: 22px;
+}
+
+
+.circleButton h3 {
+    color: #092527;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+
+
+.rectangleButton h3 {
+    color: #092527;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+
+
+.buttons:nth-child(5) .rectangleButton:nth-child(1) {
+    margin-left: 15px;
+    background-color: #ffffff;
+    width: 125px;
+    margin-top: 20px;
+    height: 43px;
+    border-radius: 5px;
+}
+
+.rectangleButton{
+   width: 62px;
+   height: 43px;
+   margin-left:  25px;
+   margin-top: 20px;
+   border-radius: 3px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.buttons:nth-child(1) .rectangleButton {
+    background-color: #121575;
+}
+
+.buttons:nth-child(2) .rectangleButton {
+    background-color: #1D9EE0;
+}
+
+.buttons:nth-child(3) .rectangleButton {
+    background-color: #D20429;
+}
+
+.buttons:nth-child(4) .rectangleButton {
+    background-color: #25C038;
+}
+
+.buttons:nth-child(5) .circleButton:nth-child(2) {
+    margin-left: 8%;
+   
+}
+
+.buttons:nth-child(5) .rectangleButton:nth-child(3) {
+    background-color: #CCC632;
+     margin-left: 9%;
+}

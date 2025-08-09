@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMO</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Wendy+One&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d6efd">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(() => console.log('Service Worker registrado!'))
+                .catch(err => console.error('Erro ao registrar SW', err));
+        }
+    </script>
+</head>
+
+
+<body>
+    <div class="brandBMO">
+        <h1>BMO</h1>
+    </div>
+
+    <div class="showCalc">
+        <div class="eyes">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="smiley">
+            <div class="mouth"></div>
+        </div>
+    </div>
+
+    <div class="calcBox">
+        <div class="intern">
+            <div class="buttons">
+                <div class="circleButton">
+                    <h2>AC</h2>
+                </div>
+                <div class="circleButton">
+                    <h2>( )</h2>
+                </div>
+                <div class="circleButton">
+                    <h2 class="percent">%</h2>
+                </div>
+                <div class="rectangleButton divide"><i data-feather="divide"></i></div>
+            </div>
+            <div class="buttons">
+                <div class="circleButton">
+                    <h3>7</h3>
+                </div>
+                <div class="circleButton">
+                    <h3>8</h3>
+                </div>
+                <div class="circleButton">
+                    <h3>9</h3>
+                </div>
+                <div class="rectangleButton multiply"><i data-feather="x"></i></div>
+            </div>
+            <div class="buttons">
+                <div class="circleButton">
+                    <h3>4</h3>
+                </div>
+                <div class="circleButton">
+                    <h3>5</h3>
+                </div>
+                <div class="circleButton">
+                    <h3>6</h3>
+                </div>
+                <div class="rectangleButton subtract"><i data-feather="minus"></i></div>
+            </div>
+            <div class="buttons">
+                <div class="circleButton">
+                    <h3>1</h3>
+                </div>
+                <div class="circleButton">
+                    <h3>2</h3>
+                </div>
+                <div class="circleButton">
+                    <h3>3</h3>
+                </div>
+                <div class="rectangleButton plus"><i data-feather="plus"></i></div>
+            </div>
+            <div class="buttons">
+                <div class="rectangleButton zero">
+                    <h3>0</h3>
+                </div>
+                <div class="circleButton">
+                    <h3>,</h3>
+                </div>
+                <div class="rectangleButton equal">
+                    <h2>=</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
