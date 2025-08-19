@@ -39,7 +39,6 @@ Apesar da estética divertida, a calculadora é completamente funcional e opera 
     ```
 3.  Abra o arquivo `index.html` no seu navegador de preferência.
 
-Alternativamente, você pode usar uma extensão como o [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) no VS Code para abrir o projeto em um servidor local.
 
 ## Inspiração
 
