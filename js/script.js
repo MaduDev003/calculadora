@@ -21,13 +21,13 @@ window.addEventListener('DOMContentLoaded', () => {
         if (currentInput === '') {
             renderFace();
         } else {
-            showCalc.innerHTML = `<div class="displayText">${currentInput}</div>`; // gera uma div no local do face
+            showCalc.innerHTML = `<div class="displayText">${currentInput}</div>`;
         }
     }
 
     function appendValue(value) {
         const isOperator = ['+', '-', '×', '÷'].includes(value);
-    
+
         if (resultDisplayed) {
             if (currentInput === 'Erro') {
                 currentInput = '';
@@ -41,14 +41,21 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
             currentInput += value;
         }
-    
+
         updateDisplay();
     }
-    
+
 
     function clearDisplay() {
         currentInput = '';
         updateDisplay();
+    }
+
+    function clearNumberOneByOne() {
+        if (currentInput.length > 0) {
+            currentInput = currentInput.slice(0, -1);
+            updateDisplay();
+        }
     }
 
     function calculate() {
@@ -77,7 +84,6 @@ window.addEventListener('DOMContentLoaded', () => {
         updateDisplay();
     }
 
-    // Botões com texto
     document.querySelectorAll('.circleButton h2, .circleButton h3, .rectangleButton h2, .rectangleButton h3').forEach(btn => {
         btn.addEventListener('click', () => {
             const value = btn.textContent.trim();
@@ -93,23 +99,35 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Botões com ícones (corrigido após feather.replace)
     document.querySelectorAll('.rectangleButton').forEach(btn => {
-        const classList = btn.classList;
-        if (classList.contains('divide')) {
-            btn.addEventListener('click', () => appendValue('÷'));
-        } else if (classList.contains('multiply')) {
-            btn.addEventListener('click', () => appendValue('×'));
-        } else if (classList.contains('subtract')) {
-            btn.addEventListener('click', () => appendValue('-'));
-        } else if (classList.contains('plus')) {
-            btn.addEventListener('click', () => appendValue('+'));
-        } else if (classList.contains('equal')) {
-            btn.addEventListener('click', () => calculate());
-        } else if (classList.contains('zero')) {
-            btn.addEventListener('click', () => appendValue('0'));
+        let action = null;
+
+        switch (true) {
+            case btn.classList.contains('divide'):
+                action = () => appendValue('÷');
+                break;
+            case btn.classList.contains('multiply'):
+                action = () => appendValue('×');
+                break;
+            case btn.classList.contains('subtract'):
+                action = () => appendValue('-');
+                break;
+            case btn.classList.contains('plus'):
+                action = () => appendValue('+');
+                break;
+            case btn.classList.contains('equal'):
+                action = () => calculate();
+                break;
+            case btn.classList.contains('zero'):
+                action = () => appendValue('0');
+                break;
         }
+
+        if (action) btn.addEventListener('click', action);
     });
+
+    const deleteOneCharacter = document.getElementById('delete');
+    deleteOneCharacter.addEventListener('click', () => clearNumberOneByOne());
 
     renderFace();
 });
