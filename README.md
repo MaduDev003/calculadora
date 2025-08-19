@@ -37,7 +37,7 @@ Apesar da estética divertida, a calculadora é completamente funcional e opera 
     ```bash
     cd calculadora
     ```
-3.  Abra o arquivo `index.html` no seu navegador de preferência.
+3.  Abra o arquivo `index.html`  
 
 
 ## Inspiração
