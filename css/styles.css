@@ -40,26 +40,26 @@ body{
 .circle{
     width: 17px;
     height: 17px;
-    background-color: #092527; /* Cor do círculo */
-    border-radius: 50%; /* Deixa o elemento circular */
+    background-color: #092527;
+    border-radius: 50%; 
 }
 
 .smiley {
     position: relative;
-    width: 50%; /* Largura responsiva */
-    height: 25%; /* Altura proporcional ao tamanho do contêiner */
-    padding-left: 49%; /* Ajusta o posicionamento da "boca" */
+    width: 50%; 
+    height: 25%;
+    padding-left: 49%;
   }
   
   .mouth {
-    width: 20%; /* Responsivo - a boca ocupa 60% da largura do contêiner */
-    height: 50%; /* Altura proporcional à altura do contêiner */
-    border-bottom: 4px solid black; /* Cria a linha do sorriso */
-    border-radius: 50%; /* Faz a curva do sorriso */
+    width: 20%; 
+    height: 50%;
+    border-bottom: 4px solid black;
+    border-radius: 50%;
     position: absolute;
-    bottom: 10%; /* Ajusta a posição vertical */
+    bottom: 10%; 
     left: 50%;
-    transform: translateX(-50%); /* Centraliza a boca */
+    transform: translateX(-50%); 
   }
 
   
@@ -86,8 +86,8 @@ body{
 }
 
 .circleButton {
-    width: min(15vw, 53px);  /* 12% da largura da tela, mas no máximo 53px */
-    height: min(15vw, 53px); /* Mantém a proporção */
+    width: min(15vw, 53px);  
+    height: min(15vw, 53px);
     background-color: #ffffff;
     border-radius: 50%;
     margin-left: 5vw;
@@ -148,7 +148,7 @@ body{
     background-color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* alinha o conteúdo no início */
+    justify-content: flex-start; 
 }
 
 .rectangleButton.zero h3 {
