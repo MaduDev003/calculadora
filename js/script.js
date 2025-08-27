@@ -69,6 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const result = eval(expression);
             currentInput = result.toString().replace('.', ',');
             resultDisplayed = true;
+            
             updateDisplay();
         } catch {
             currentInput = 'Erro';
